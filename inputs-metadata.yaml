@@ -1,0 +1,2758 @@
+parameter_meta:
+  metaboigniter.outdir:
+    description: Output directory for results
+    group: global_options
+    help: ''
+    hidden: false
+  metaboigniter.email:
+    description: Email address for completion summary
+    group: global_options
+    help: An email address to send a summary email to when the pipeline is completed.
+    hidden: false
+  metaboigniter.quantification_openms_xcms_library_neg:
+    description: set whether you want to do quantification with OpenMS (openms) or
+      XCMS (xcms) in negative ionization  (for library)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.performIPO_library_neg:
+    description: Controls how to perform IPO
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: 'Possible values:
+
+      * `none`: don''t perform IPO
+
+      * `global`: performs IPO on all or selected number of samples
+
+      * `local`: performs IPO on individual samples one at the time'
+    hidden: true
+  metaboigniter.ipo_methodXset_library_neg:
+    description: Quantification methods for IPO
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: Only centWave is supported at this stage.
+    hidden: true
+  metaboigniter.ipo_noise_l_library_neg:
+    description: lowest level of noise
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_noise_h_library_neg:
+    description: highest level of noise
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_snthresh_l_library_neg:
+    description: lowest level of signal to noise threshold
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_snthresh_h_library_neg:
+    description: highest level of signal to noise threshold
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzCenterFun_library_neg:
+    description: Function for centering the mz
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_integrate_library_neg:
+    description: Integration method
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_fitgauss_library_neg:
+    description: logical, if TRUE a Gaussian is fitted
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_min_peakwidth_l_library_neg:
+    description: lower minimum width of peaks
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_min_peakwidth_h_library_neg:
+    description: higher minimum width of peaks
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_peakwidth_l_library_neg:
+    description: lower maximum width of peaks
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_peakwidth_h_library_neg:
+    description: higher maximum width of peaks
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ppm_l_library_neg:
+    description: lower ppm mass deviation
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ppm_h_library_neg:
+    description: higher ppm mass deviation
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzdiff_l_library_neg:
+    description: lower minimum difference in m/z for peaks with overlapping retention
+      times, can be negative to allow overlap
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzdiff_h_library_neg:
+    description: higher minimum difference in m/z for peaks with overlapping retention
+      times, can be negative to allow overlap
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_charge_camera_library_neg:
+    description: maximum charge of molecules (only used in individual setting)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_ppm_camera_library_neg:
+    description: ppm mass deviation for adducts (only used in individual setting)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_l_l_library_neg:
+    description: lower value of K in 'prefilter_library_neg=c(k,I)'. Prefilter step
+      for the first phase. Mass traces are only retained if they contain at least
+      'k' peaks with intensity >_library_neg= 'I'.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_l_h_library_neg:
+    description: higher value of K in 'prefilter_library_neg=c(k,I)'. Prefilter step
+      for the first phase. Mass traces are only retained if they contain at least
+      'k' peaks with intensity >_library_neg= 'I'.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_h_l_library_neg:
+    description: lower I in prefilter
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_h_h_library_neg:
+    description: higher I in prefilter
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ncores_library_neg:
+    description: number of cores used in IPO
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapInit_l_library_neg:
+    description: lower Penalty for Gap opening
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapInit_h_library_neg:
+    description: higher Penalty for Gap opening
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapExtend_l_library_neg:
+    description: lower Penalty for Gap enlargement
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapExtend_h_library_neg:
+    description: higher Penalty for Gap enlargement
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_profStep_l_library_neg:
+    description: lower step size (in m/z) to use for profile generation from the raw
+      data files
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_profStep_h_library_neg:
+    description: higher step size (in m/z) to use for profile generation from the
+      raw data files
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_response_l_library_neg:
+    description: lower Responsiveness of warping.  0 will give a linear warp based
+      on start and end points.  100 will use all bijective anchors
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_response_h_library_neg:
+    description: higher Responsiveness of warping.  0 will give a linear warp based
+      on start and end points.  100 will use all bijective anchors
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorDiag_l_library_neg:
+    description: lower Local weighting applied to diagonal moves in alignment.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorDiag_h_library_neg:
+    description: higher Local weighting applied to diagonal moves in alignment.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorGap_l_library_neg:
+    description: lower Local weighting applied to gap moves in alignment.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorGap_h_library_neg:
+    description: higher Local weighting applied to gap moves in alignment.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_localAlignment_library_neg:
+    description: Local rather than global alignment
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_bw_l_library_neg:
+    description: lower bandwidth (consider something like retention time differences)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_bw_h_library_neg:
+    description: higher bandwidth (consider something like retention time differences)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minfrac_l_library_neg:
+    description: lower minimum fraction of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minfrac_h_library_neg:
+    description: higher minimum fraction of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzwid_l_library_neg:
+    description: lower mz width (mz differences)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzwid_h_library_neg:
+    description: higher mz width (mz differences)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minsamp_l_library_neg:
+    description: lower minimum number of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minsamp_h_library_neg:
+    description: higher minimum number of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_l_library_neg:
+    description: lower maximum number of groups to identify in a single m/z slice
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_h_library_neg:
+    description: higher maximum number of groups to identify in a single m/z slice
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_distFunc_library_neg:
+    description: 'DistFunc function: cor (Pearson''s R) or cor_opt (default, calculate
+      only 10% diagonal band of distance matrix, better runtime), cov (covariance),
+      prd (product), euc (Euclidean distance)'
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_methodRT_library_neg:
+    description: Only obiwarp is supported
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.masstrace_ppm_library_neg_xcms:
+    description: mass trace deviation in ppm
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.peakwidthlow_quant_library_neg_xcms:
+    description: lower width of peaks
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.peakwidthhigh_quant_library_neg_xcms:
+    description: highest width of peaks
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.noise_quant_library_neg_xcms:
+    description: level of noise
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.mzdiff_quant_library_neg_xcms:
+    description: minimum difference in m/z for peaks with overlapping retention times,
+      can be negative to allow overlap
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.snthresh_quant_library_neg_xcms:
+    description: signal to noise ratio cutoff, definition see below.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.prefilter_quant_library_neg_xcms:
+    description: K in 'prefilter=c(k,I)'. Prefilter step for the first phase. Mass
+      traces are only retained if they contain at least 'k' peaks with intensity >=
+      'I'.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.value_of_prefilter_quant_library_neg_xcms:
+    description: I in prefilter
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.mzCenterFun_quant_library_neg_xcms:
+    description: 'Function to calculate the m/z center of the feature: ''wMean'' intensity
+      weighted mean of the feature m/z values, ''mean'' mean of the feature m/z values,
+      ''apex'' use m/z value at peak apex, ''wMeanApex3'' intensity weighted mean
+      of the m/z value at peak apex and the m/z value left and right of it, ''meanApex3''
+      mean of the m/z value at peak apex and the m/z value left and right of it.'
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.integrate_quant_library_neg_xcms:
+    description: Integration method. If '=1' peak limits are found through descent
+      on the mexican hat filtered data, if '=2' the descent is done on the real data.
+      Method 2 is very accurate but prone to noise, while method 1 is more robust
+      to noise but less exact.
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.fitgauss_quant_library_neg_xcms:
+    description: logical, if TRUE a Gaussian is fitted
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.sampleclass_quant_library_neg_xcms:
+    description: A name for the class of sample
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.sigma_group_library_neg_camera:
+    description: sigma value for grouping the peaks across chromatogram
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.perfwhm_group_library_neg_camera:
+    description: full width at half maximum for finding overlaping peaks
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.intval_group_library_neg_camera:
+    description: which intensity value to use
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ppm_findaddcuts_library_neg_camera:
+    description: ppm deviation between theoritical adduct mass and the experimental
+      one
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.polarity_findaddcuts_library_neg_camera:
+    description: this has to be negative (for testing only)!
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.maxcharge_findisotopes_library_neg_camera:
+    description: number of changes to consider (most often 1 is enough)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ppm_mapmsmstocamera_library_neg_msnbase:
+    description: ppm deviation when mapping MS2 parent ion to a mass trace
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.rt_mapmsmstocamera_library_neg_msnbase:
+    description: rt difference (in second) for mapping MS2 parent ion to a mass trace
+      (the mass trace is a range, star and end of the trace)
+    group: internal_library_quantification_and_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.raw_file_name_preparelibrary_neg_msnbase:
+    description: name of the column showing which raw files contain which metabolite
+      in the library_description_neg csv file
+    group: internal_library_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.compund_id_preparelibrary_neg_msnbase:
+    description: name of the column showing id of the metabolites in the library_description_neg
+      csv file
+    group: internal_library_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.compound_name_preparelibrary_neg_msnbase:
+    description: name of the compount column in the library_description_neg csv file
+    group: internal_library_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.mz_col_preparelibrary_neg_msnbase:
+    description: name of the mz column in the library_description_neg csv file
+    group: internal_library_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.which_mz_preparelibrary_neg_msnbase:
+    description: '"f" or "c", showing whether the Feature range or centroid of the
+      feature should be used for mapping'
+    group: internal_library_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ncore_searchengine_library_neg_msnbase:
+    description: Number of cores for mapping the features
+    group: internal_library_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ppm_create_library_neg_msnbase:
+    description: ppm error for mapping the library characterization masses to the
+      experimental one
+    group: internal_library_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ppm_output_neg_camera:
+    description: relative difference of mass of the ID hit compare to a mass trace
+      (ppm)
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.rt_output_neg_camera:
+    description: retention time difference of ID to mass trace (second)
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.impute_output_neg_camera:
+    description: should we impute adduct and different chance states with the same
+      ID
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.type_column_output_neg_camera:
+    description: Class of the samples (used for statistics and coverage calculations)
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.selected_type_output_neg_camera:
+    description: what class of samples do you want to keep (anything not matching
+      this in the Class column will be removed)
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.rename_output_neg_camera:
+    description: you want to rename the files
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.rename_col_output_neg_camera:
+    description: which column of the phenotype file to use for renaming
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.only_report_with_id_output_neg_camera:
+    description: do only want to see the identified mass traces or everything?
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.combine_replicate_output_neg_camera:
+    description: do you have technical replicates you want to average ?
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.combine_replicate_column_output_neg_camera:
+    description: which column of the phenotype file show the technical replicates
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.log_output_neg_camera:
+    description: should we log2 the output
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.sample_coverage_output_neg_camera:
+    description: any mass trace having more pecentage of the missing value will be
+      removed
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.normalize_output_neg_camera:
+    description: do you want to normalize the data set to 'NA' if you don't want normalization
+    group: output_preparation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_csv_files_neg_cfmid:
+    description: path to a csv file containing your database
+    group: cfm_id_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.ncore_neg_cfmid:
+    description: number of cores that cfm can use
+    group: cfm_id_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.candidate_id_identification_neg_cfmid:
+    description: name of the column in the database for id of the molecules
+    group: cfm_id_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.candidate_inchi_smiles_identification_neg_cfmid:
+    description: name of the column in the database for smile of the molecules
+    group: cfm_id_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.candidate_mass_identification_neg_cfmid:
+    description: name of the column in the database for mass of the molecules
+    group: cfm_id_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_name_column_identification_neg_cfmid:
+    description: name of the column in the database for name of the molecules
+    group: cfm_id_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_inchI_column_identification_neg_cfmid:
+    description: name of the column in the database for inchi of the molecules
+    group: cfm_id_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_csv_files_neg_metfrag:
+    description: path to a csv file containing your database
+    group: metfrag_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.ncore_neg_metfrag:
+    description: number of cores that metfrag can use
+    group: metfrag_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_csifingerid_neg_csifingerid:
+    description: 'IMPORTANT: we don''t support database file for csi:fingerid. You
+      will need to provide what database to use here, the rest of the parameters will
+      be taken from there parameter file'
+    group: csi_fingerid_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.ncore_csifingerid_neg_csifingerid:
+    description: number of cores that csi can use
+    group: csi_fingerid_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.timeout_csifingerid_neg_csifingerid:
+    description: number of seconds that each csi ion can rum (time limit)
+    group: csi_fingerid_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.ppm_mapmsmstocamera_neg_msnbase:
+    description: ppm deviation when mapping MS2 parent ion to a mass trace
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.rt_mapmsmstocamera_neg_msnbase:
+    description: rt difference (in second) for mapping MS2 parent ion to a mass trace
+      (the mass trace is a range, star and end of the trace)
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.precursorppm_msmstoparam_neg_msnbase:
+    description: relative mass tolerance of the precursor (ppm)
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.fragmentppm_msmstoparam_neg_msnbase:
+    description: relative mass tolerance of the fragment ions (ppm)
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.fragmentabs_msmstoparam_neg_msnbase:
+    description: absolute mass tolerance of the fragment ions
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_msmstoparam_neg_msnbase:
+    description: type of database to use (see metaboIGNITER guide)
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.mode_msmstoparam_neg_msnbase:
+    description: ionization method. This has to be neg (only for testing at this stage)
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.adductRules_msmstoparam_neg_msnbase:
+    description: adduct rules (primary or extended)
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.minPeaks_msmstoparam_neg_msnbase:
+    description: ions with less that this number will be removed
+    group: global_identification_parameters_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.sigma_group_neg_camera:
+    description: sigma value for grouping the peaks across chromatogram
+    group: adduct_and_isotope_annotation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.perfwhm_group_neg_camera:
+    description: full width at half maximum for finding overlaping peaks
+    group: adduct_and_isotope_annotation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.intval_group_neg_camera:
+    description: which intensity value to use
+    group: adduct_and_isotope_annotation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.ppm_findaddcuts_neg_camera:
+    description: ppm deviation between theoritical adduct mass and the experimental
+      one
+    group: adduct_and_isotope_annotation_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.polarity_findaddcuts_neg_camera:
+    description: this has to be negative (for testing only)!
+    group: adduct_and_isotope_annotation_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.maxcharge_findisotopes_neg_camera:
+    description: number of changes to consider (most often 1 is enough)
+    group: adduct_and_isotope_annotation_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.blank_filter_neg:
+    description: set to true if you want to remove signal from blank
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.method_blankfilter_neg_xcms:
+    description: method of sumarization of signal in blank samples
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.blank_blankfilter_neg_xcms:
+    description: Name of the class of the blank samples
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.sample_blankfilter_neg_xcms:
+    description: Name of the class of the biological samples
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.rest_blankfilter_neg_xcms:
+    description: set to T to compare blanks only to rest of the samples
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.dilution_filter_neg:
+    description: Whether blank filtereing should be done or not?
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.corto_dilutionfilter_neg_xcms:
+    description: 'This series will used for calculation of correlation. For example
+      if this parameter is set like 1,2,3 and the class of dilution trends is set
+      as D1,D2,D3 the following the pairs will be used for calculating the correlation:
+      (D1,1),(D2,2),(D3,3)'
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.dilution_dilutionfilter_neg_xcms:
+    description: The class of the samples represneting dilution. This has to be separated
+      by comma!
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.pvalue_dilutionfilter_neg_xcms:
+    description: p-value of the correlation. Anything higher than this will be removed!
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.corcut_dilutionfilter_neg_xcms:
+    description: minimum expected correlation. Aniything lower than this will be removed!
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.abs_dilutionfilter_neg_xcms:
+    description: If the tool should consider absolute correlation rather than the
+      typical one from [-1 to 1] (F or T)
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.cv_filter_neg:
+    description: select to whether perfrom cv filtering or not
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.qc_cvfilter_neg_xcms:
+    description: class of your QC samples
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.cvcut_cvfilter_neg_xcms:
+    description: Maximum coefficient of variation you expect. Anything higher than
+      this will be removed!
+    group: filtering_parameters_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.quantification_openms_xcms_neg:
+    description: set whether you want to do quantification with OpenMS (openms) or
+      XCMS (xcms) in negative ionization
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.performIPO_neg:
+    description: 'controls how to perform IPO possible values: "none": don''t perform
+      IPO, "global": performs IPO on all or selected number of samples. "global_quant":
+      perform IPO only for quantification (not retention time correction and grouping),
+      "local": performs IPO on individual samples one at the time. "local_quant":
+      performs IPO on individual samples only for quantification, "local_RT": performs
+      IPO on only for retention time correction and grouping.'
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_allSamples_neg:
+    description: Performs IPO on all the samples irrespective of the class they have
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_columnToSelect_neg:
+    description: If ipo_allSamples_neg is false, one must pass the phenotype file
+      to select sample. This parameter select the column of the phenotype file.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_valueToSelect_neg:
+    description: Selects the files only with this value in the columnToSelect column
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_methodXset_neg:
+    description: Quantification methods for IPO. Only centWave is supported at this
+      stage.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_noise_l_neg:
+    description: lowest level of noise
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_noise_h_neg:
+    description: highest level of noise
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_snthresh_l_neg:
+    description: lowest level of signal to noise threshold
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_snthresh_h_neg:
+    description: highest level of signal to noise threshold
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzCenterFun_neg:
+    description: Function for centering the mz
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_integrate_neg:
+    description: Integration method. If '=1' peak limits are found through descent
+      on the mexican hat filtered data, if '=2' the descent is done on the real data.
+      Method 2 is very accurate but prone to noise, while method 1 is more robust
+      to noise but less exact.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_fitgauss_neg:
+    description: logical, if TRUE a Gaussian is fitte
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_min_peakwidth_l_neg:
+    description: lower minimum width of peaks
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_min_peakwidth_h_neg:
+    description: higher minimum width of peaks
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_peakwidth_l_neg:
+    description: lower maximum width of peaks
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_peakwidth_h_neg:
+    description: higher maximum width of peaks
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ppm_l_neg:
+    description: lower ppm mass deviation
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ppm_h_neg:
+    description: higher ppm mass deviation
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzdiff_l_neg:
+    description: lower minimum difference in m/z for peaks with overlapping retention
+      times, can be negative to allow overlap
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzdiff_h_neg:
+    description: higher minimum difference in m/z for peaks with overlapping retention
+      times, can be negative to allow overlap
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_charge_camera_neg:
+    description: maximum charge of molecules (only used in individual setting)
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_ppm_camera_neg:
+    description: ppm mass deviation for adducts (only used in individual setting)
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_l_l_neg:
+    description: lower value of K in 'prefilter_neg=c(k,I)'. Prefilter step for the
+      first phase. Mass traces are only retained if they contain at least 'k' peaks
+      with intensity >_neg= 'I'.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_l_h_neg:
+    description: higher value of K in 'prefilter_neg=c(k,I)'. Prefilter step for the
+      first phase. Mass traces are only retained if they contain at least 'k' peaks
+      with intensity >_neg= 'I'.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_h_l_neg:
+    description: lower I in prefilter
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_h_h_neg:
+    description: higher I in prefilter
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ncores_neg:
+    description: number of cores used in IPO
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapInit_l_neg:
+    description: lower Penalty for Gap opening
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapInit_h_neg:
+    description: higher Penalty for Gap opening
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapExtend_l_neg:
+    description: lower Penalty for Gap enlargement
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapExtend_h_neg:
+    description: higher Penalty for Gap enlargement
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_profStep_l_neg:
+    description: lower step size (in m/z) to use for profile generation from the raw
+      data files
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_profStep_h_neg:
+    description: higher step size (in m/z) to use for profile generation from the
+      raw data files
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_response_l_neg:
+    description: lower Responsiveness of warping.  0 will give a linear warp based
+      on start and end points.  100 will use all bijective anchors
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_response_h_neg:
+    description: higher Responsiveness of warping.  0 will give a linear warp based
+      on start and end points.  100 will use all bijective anchors
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorDiag_l_neg:
+    description: lower Local weighting applied to diagonal moves in alignment
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorDiag_h_neg:
+    description: higher Local weighting applied to diagonal moves in alignment
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorGap_l_neg:
+    description: lower Local weighting applied to gap moves in alignment
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorGap_h_neg:
+    description: higher Local weighting applied to gap moves in alignment
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_localAlignment_neg:
+    description: Local rather than global alignment
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_bw_l_neg:
+    description: lower bandwidth (consider something like retention time differences)
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_bw_h_neg:
+    description: higher bandwidth (consider something like retention time differences)
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minfrac_l_neg:
+    description: lower minimum fraction of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minfrac_h_neg:
+    description: higher minimum fraction of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzwid_l_neg:
+    description: lower mz width (mz differences)
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzwid_h_neg:
+    description: higher mz width (mz differences)
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minsamp_l_neg:
+    description: lower minimum number of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minsamp_h_neg:
+    description: higher minimum number of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_l_neg:
+    description: lower maximum number of groups to identify in a single m/z slice
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_h_neg:
+    description: higher maximum number of groups to identify in a single m/z slice
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_distFunc_neg:
+    description: 'DistFunc function: cor (Pearson''s R) or cor_opt (default, calculate
+      only 10% diagonal band of distance matrix, better runtime), cov (covariance),
+      prd (product), euc (Euclidean distance)'
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_methodRT_neg:
+    description: Only obiwarp is supported
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.masstrace_ppm_neg_xcms:
+    description: masstrance deviation in ppm
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.peakwidthlow_quant_neg_xcms:
+    description: lower width of peaks
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.peakwidthhigh_quant_neg_xcms:
+    description: highest width of peaks
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.noise_quant_neg_xcms:
+    description: level of noise
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.mzdiff_quant_neg_xcms:
+    description: minimum difference in m/z for peaks with overlapping retention times,
+      can be negative to allow overlap
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.snthresh_quant_neg_xcms:
+    description: signal to noise ratio cutoff, definition see below.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.prefilter_quant_neg_xcms:
+    description: K in 'prefilter=c(k,I)'. Prefilter step for the first phase. Mass
+      traces are only retained if they contain at least 'k' peaks with intensity >=
+      'I'.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.value_of_prefilter_quant_neg_xcms:
+    description: I in prefilter
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.mzCenterFun_quant_neg_xcms:
+    description: 'Function to calculate the m/z center of the feature: ''wMean'' intensity
+      weighted mean of the feature m/z values, ''mean'' mean of the feature m/z values,
+      ''apex'' use m/z value at peak apex, ''wMeanApex3'' intensity weighted mean
+      of the m/z value at peak apex and the m/z value left and right of it, ''meanApex3''
+      mean of the m/z value at peak apex and the m/z value left and right of it.'
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.integrate_quant_neg_xcms:
+    description: Integration method. If '=1' peak limits are found through descent
+      on the mexican hat filtered data, if '=2' the descent is done on the real data.
+      Method 2 is very accurate but prone to noise, while method 1 is more robust
+      to noise but less exact.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.fitgauss_quant_neg_xcms:
+    description: logical, if TRUE a Gaussian is fitted
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.phenodatacolumn_quant_neg:
+    description: name of the column in the phenotype_design_neg showing class information
+      of the samples
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.sampleclass_quant_neg_xcms:
+    description: A name for the class of sample
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.profStep_align_N1_neg_xcms:
+    description: step size (in m/z) to use for profile generation from the raw data
+      files
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.center_align_N1_neg_xcms:
+    description: the index of the sample all others will be aligned to. If center==NULL,
+      the sample with the most peaks is chosen as default.
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.response_align_N1_neg_xcms:
+    description: Responsiveness of warping.  0 will give a linear warp based on start
+      and end points.  100 will use all bijective anchors
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.distFunc_align_N1_neg_xcms:
+    description: 'DistFunc function: cor (Pearson''s R) or cor_opt (default, calculate
+      only 10% diagonal band of distance matrix, better runtime), cov (covariance),
+      prd (product), euc (Euclidean distance)'
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.gapInit_align_N1_neg_xcms:
+    description: Penalty for Gap opening
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.gapExtend_align_N1_neg_xcms:
+    description: Penalty for Gap enlargement
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.factorDiag_align_N1_neg_xcms:
+    description: Local weighting applied to diagonal moves in alignment
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.factorGap_align_N1_neg_xcms:
+    description: Local weighting applied to gap moves in alignment
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.localAlignment_align_N1_neg_xcms:
+    description: Local rather than global alignment
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.bandwidth_group_N1_neg_xcms:
+    description: bandwidth (consider something like retention time differences)
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.mzwid_group_N1_neg_xcms:
+    description: mz width (mz differences)
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.minfrac_group_N1_neg_xcms:
+    description: minimum fraction of samples necessary in at least one of the sample
+      groups for it to be a valid group
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.minsamp_group_N1_neg_xcms:
+    description: minimum number of samples necessary in at least one of the sample
+      groups for it to be a valid group
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.max_group_N1_neg_xcms:
+    description: maximum number of groups to identify in a single m/z slice
+    group: quantification_parameter_negative_mode
+    help: ''
+    hidden: false
+  metaboigniter.quantification_openms_xcms_library_pos:
+    description: set whether you want to do quantification with OpenMS (openms) or
+      XCMS (xcms) in positive ionization  (for library)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.performIPO_library_pos:
+    description: 'controls how to perform IPO possible values: "none": don''t perform
+      IPO, "global": performs IPO on all or selected number of samples. "local": performs
+      IPO on individual samples one at the time.'
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_methodXset_library_pos:
+    description: Quantification methods for IPO. Only centWave is supported at this
+      stage.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_noise_l_library_pos:
+    description: lowest level of noise
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_noise_h_library_pos:
+    description: highest level of noise
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_snthresh_l_library_pos:
+    description: lowest level of signal to noise threshold
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_snthresh_h_library_pos:
+    description: highest level of signal to noise threshold
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzCenterFun_library_pos:
+    description: Function for centering the mz
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_integrate_library_pos:
+    description: Integration method. If '=1' peak limits are found through descent
+      on the mexican hat filtered data, if '=2' the descent is done on the real data.
+      Method 2 is very accurate but prone to noise, while method 1 is more robust
+      to noise but less exact.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_fitgauss_library_pos:
+    description: logical, if TRUE a Gaussian is fitte
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_min_peakwidth_l_library_pos:
+    description: lower minimum width of peaks
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_min_peakwidth_h_library_pos:
+    description: higher minimum width of peaks
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_peakwidth_l_library_pos:
+    description: lower maximum width of peaks
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_peakwidth_h_library_pos:
+    description: higher maximum width of peaks
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ppm_l_library_pos:
+    description: lower ppm mass deviation
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ppm_h_library_pos:
+    description: higher ppm mass deviation
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzdiff_l_library_pos:
+    description: lower minimum difference in m/z for peaks with overlapping retention
+      times, can be negative to allow overlap
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzdiff_h_library_pos:
+    description: higher minimum difference in m/z for peaks with overlapping retention
+      times, can be negative to allow overlap
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_charge_camera_library_pos:
+    description: maximum charge of molecules (only used in individual setting)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_ppm_camera_library_pos:
+    description: ppm mass deviation for adducts (only used in individual setting)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_l_l_library_pos:
+    description: lower value of K in 'prefilter_library_pos=c(k,I)'. Prefilter step
+      for the first phase. Mass traces are only retained if they contain at least
+      'k' peaks with intensity >_library_pos= 'I'.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_l_h_library_pos:
+    description: higher value of K in 'prefilter_library_pos=c(k,I)'. Prefilter step
+      for the first phase. Mass traces are only retained if they contain at least
+      'k' peaks with intensity >_library_pos= 'I'.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_h_l_library_pos:
+    description: lower I in prefilter
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_h_h_library_pos:
+    description: higher I in prefilter
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ncores_library_pos:
+    description: number of cores used in IPO
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapInit_l_library_pos:
+    description: lower Penalty for Gap opening
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapInit_h_library_pos:
+    description: higher Penalty for Gap opening
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapExtend_l_library_pos:
+    description: lower Penalty for Gap enlargement
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapExtend_h_library_pos:
+    description: higher Penalty for Gap enlargement
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_profStep_l_library_pos:
+    description: lower step size (in m/z) to use for profile generation from the raw
+      data files
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_profStep_h_library_pos:
+    description: higher step size (in m/z) to use for profile generation from the
+      raw data files
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_response_l_library_pos:
+    description: lower Responsiveness of warping.  0 will give a linear warp based
+      on start and end points.  100 will use all bijective anchors
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_response_h_library_pos:
+    description: higher Responsiveness of warping.  0 will give a linear warp based
+      on start and end points.  100 will use all bijective anchors
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorDiag_l_library_pos:
+    description: lower Local weighting applied to diagonal moves in alignment.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorDiag_h_library_pos:
+    description: higher Local weighting applied to diagonal moves in alignment.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorGap_l_library_pos:
+    description: lower Local weighting applied to gap moves in alignment.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorGap_h_library_pos:
+    description: higher Local weighting applied to gap moves in alignment.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_localAlignment_library_pos:
+    description: Local rather than global alignment
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_bw_l_library_pos:
+    description: lower bandwidth (consider something like retention time differences)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_bw_h_library_pos:
+    description: higher bandwidth (consider something like retention time differences)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minfrac_l_library_pos:
+    description: lower minimum fraction of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minfrac_h_library_pos:
+    description: higher minimum fraction of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzwid_l_library_pos:
+    description: lower mz width (mz differences)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzwid_h_library_pos:
+    description: higher mz width (mz differences)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minsamp_l_library_pos:
+    description: lower minimum number of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minsamp_h_library_pos:
+    description: higher minimum number of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_l_library_pos:
+    description: lower maximum number of groups to identify in a single m/z slice
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_h_library_pos:
+    description: higher maximum number of groups to identify in a single m/z slice
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_distFunc_library_pos:
+    description: 'DistFunc function: cor (Pearson''s R) or cor_opt (default, calculate
+      only 10% diagonal band of distance matrix, better runtime), cov (covariance),
+      prd (product), euc (Euclidean distance)'
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_methodRT_library_pos:
+    description: Only obiwarp is supported
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.masstrace_ppm_library_pos_xcms:
+    description: mass trace deviation in ppm
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.peakwidthlow_quant_library_pos_xcms:
+    description: lower width of peaks
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.peakwidthhigh_quant_library_pos_xcms:
+    description: highest width of peaks
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.noise_quant_library_pos_xcms:
+    description: level of noise
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.mzdiff_quant_library_pos_xcms:
+    description: minimum difference in m/z for peaks with overlapping retention times,
+      can be negative to allow overlap
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.snthresh_quant_library_pos_xcms:
+    description: signal to noise ratio cutoff, definition see below.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.prefilter_quant_library_pos_xcms:
+    description: K in 'prefilter=c(k,I)'. Prefilter step for the first phase. Mass
+      traces are only retained if they contain at least 'k' peaks with intensity >=
+      'I'.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.value_of_prefilter_quant_library_pos_xcms:
+    description: I in prefilter
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.mzCenterFun_quant_library_pos_xcms:
+    description: 'Function to calculate the m/z center of the feature: ''wMean'' intensity
+      weighted mean of the feature m/z values, ''mean'' mean of the feature m/z values,
+      ''apex'' use m/z value at peak apex, ''wMeanApex3'' intensity weighted mean
+      of the m/z value at peak apex and the m/z value left and right of it, ''meanApex3''
+      mean of the m/z value at peak apex and the m/z value left and right of it.'
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.integrate_quant_library_pos_xcms:
+    description: Integration method. If '=1' peak limits are found through descent
+      on the mexican hat filtered data, if '=2' the descent is done on the real data.
+      Method 2 is very accurate but prone to noise, while method 1 is more robust
+      to noise but less exact.
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.fitgauss_quant_library_pos_xcms:
+    description: logical, if TRUE a Gaussian is fitted
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.sampleclass_quant_library_pos_xcms:
+    description: A name for the class of sample
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.sigma_group_library_pos_camera:
+    description: sigma value for grouping the peaks across chromatogram
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.perfwhm_group_library_pos_camera:
+    description: full width at half maximum for finding overlaping peaks
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.intval_group_library_pos_camera:
+    description: which intensity value to use
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ppm_findaddcuts_library_pos_camera:
+    description: ppm deviation between theoritical adduct mass and the experimental
+      one
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.polarity_findaddcuts_library_pos_camera:
+    description: this has to be positive (for testing only)!
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.maxcharge_findisotopes_library_pos_camera:
+    description: number of changes to consider (most often 1 is enough)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ppm_mapmsmstocamera_library_pos_msnbase:
+    description: ppm deviation when mapping MS2 parent ion to a mass trace
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.rt_mapmsmstocamera_library_pos_msnbase:
+    description: rt difference (in second) for mapping MS2 parent ion to a mass trace
+      (the mass trace is a range, star and end of the trace)
+    group: internal_library_quantification_and_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.raw_file_name_preparelibrary_pos_msnbase:
+    description: name of the column showing which raw files contain which metabolite
+      in the library_description_pos csv file
+    group: internal_library_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.compund_id_preparelibrary_pos_msnbase:
+    description: name of the column showing id of the metabolites in the library_description_pos
+      csv file
+    group: internal_library_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.compound_name_preparelibrary_pos_msnbase:
+    description: name of the compount column in the library_description_pos csv file
+    group: internal_library_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.mz_col_preparelibrary_pos_msnbase:
+    description: name of the mz column in the library_description_pos csv file
+    group: internal_library_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.which_mz_preparelibrary_pos_msnbase:
+    description: '"f" or "c", showing whether the Feature range or centroid of the
+      feature should be used for mapping'
+    group: internal_library_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ncore_searchengine_library_pos_msnbase:
+    description: Number of cores for mapping the features
+    group: internal_library_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ppm_create_library_pos_msnbase:
+    description: ppm error for mapping the library characterization masses to the
+      experimental one
+    group: internal_library_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ppm_output_pos_camera:
+    description: relative difference of mass of the ID hit compare to a mass trace
+      (ppm)
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.rt_output_pos_camera:
+    description: retention time difference of ID to mass trace (second)
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.impute_output_pos_camera:
+    description: should we impute adduct and different chance states with the same
+      ID
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.type_column_output_pos_camera:
+    description: Class of the samples (used for statistics and coverage calculations)
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.selected_type_output_pos_camera:
+    description: what class of samples do you want to keep (anything not matching
+      this in the Class column will be removed)
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.rename_output_pos_camera:
+    description: you want to rename the files
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.rename_col_output_pos_camera:
+    description: which column of the phenotype file to use for renaming
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.only_report_with_id_output_pos_camera:
+    description: do only want to see the identified mass traces or everything?
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.combine_replicate_output_pos_camera:
+    description: do you have technical replicates you want to average ?
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.combine_replicate_column_output_pos_camera:
+    description: which column of the phenotype file show the technical replicates
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.log_output_pos_camera:
+    description: should we log2 the output
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.sample_coverage_output_pos_camera:
+    description: any mass trace having more pecentage of the missing value will be
+      removed
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.normalize_output_pos_camera:
+    description: do you want to normalize the data set to 'NA' if you don't want normalization
+    group: output_preparation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_csv_files_pos_cfmid:
+    description: path to a csv file containing your database
+    group: cfm_id_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.ncore_pos_cfmid:
+    description: number of cores that cfm can use
+    group: cfm_id_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.candidate_id_identification_pos_cfmid:
+    description: name of the column in the database for id of the molecules
+    group: cfm_id_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.candidate_inchi_smiles_identification_pos_cfmid:
+    description: name of the column in the database for smile of the molecules
+    group: cfm_id_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.candidate_mass_identification_pos_cfmid:
+    description: name of the column in the database for mass of the molecules
+    group: cfm_id_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_name_column_identification_pos_cfmid:
+    description: name of the column in the database for name of the molecules
+    group: cfm_id_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_inchI_column_identification_pos_cfmid:
+    description: name of the column in the database for inchi of the molecules
+    group: cfm_id_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_csv_files_pos_metfrag:
+    description: path to a csv file containing your database
+    group: metfrag_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.ncore_pos_metfrag:
+    description: number of cores that metfrag can use
+    group: metfrag_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_csifingerid_pos_csifingerid:
+    description: 'IMPORTANT: we don''t support database file for csi:fingerid. You
+      will need to provide what database to use here, the rest of the parameters will
+      be taken from there parameter file'
+    group: csi_fingerid_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.ncore_csifingerid_pos_csifingerid:
+    description: number of cores that csi can use
+    group: csi_fingerid_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.timeout_csifingerid_pos_csifingerid:
+    description: number of seconds that each csi ion can rum (time limit)
+    group: csi_fingerid_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.ppm_mapmsmstocamera_pos_msnbase:
+    description: ppm deviation when mapping MS2 parent ion to a mass trace
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.rt_mapmsmstocamera_pos_msnbase:
+    description: rt difference (in second) for mapping MS2 parent ion to a mass trace
+      (the mass trace is a range, star and end of the trace)
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.precursorppm_msmstoparam_pos_msnbase:
+    description: relative mass tolerance of the precursor (ppm)
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.fragmentppm_msmstoparam_pos_msnbase:
+    description: relative mass tolerance of the fragment ions (ppm)
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.fragmentabs_msmstoparam_pos_msnbase:
+    description: absolute mass tolerance of the fragment ions
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.database_msmstoparam_pos_msnbase:
+    description: type of database to use (see metaboIGNITER guide)
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.mode_msmstoparam_pos_msnbase:
+    description: ionization method. This has to be pos (only for testing at this stage)
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.adductRules_msmstoparam_pos_msnbase:
+    description: adduct rules (primary or extended)
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.minPeaks_msmstoparam_pos_msnbase:
+    description: ions with less that this number will be removed
+    group: global_identification_parameters_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.sigma_group_pos_camera:
+    description: sigma value for grouping the peaks across chromatogram
+    group: adduct_and_isotope_annotation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.perfwhm_group_pos_camera:
+    description: full width at half maximum for finding overlaping peaks
+    group: adduct_and_isotope_annotation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.intval_group_pos_camera:
+    description: which intensity value to use
+    group: adduct_and_isotope_annotation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.ppm_findaddcuts_pos_camera:
+    description: ppm deviation between theoritical adduct mass and the experimental
+      one
+    group: adduct_and_isotope_annotation_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.polarity_findaddcuts_pos_camera:
+    description: this has to be positive (for testing only)!
+    group: adduct_and_isotope_annotation_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.maxcharge_findisotopes_pos_camera:
+    description: number of changes to consider (most often 1 is enough)
+    group: adduct_and_isotope_annotation_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.blank_filter_pos:
+    description: set to true if you want to remove signal from blank
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.method_blankfilter_pos_xcms:
+    description: method of sumarization of signal in blank samples. Must be one of
+      'max', 'mean' or 'median'. For example, if 'max' is selected, a signal will
+      be removed if it maximum abundance in the blank samples is higher than maximum
+      abundance in biological samples.
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.blank_blankfilter_pos_xcms:
+    description: Name of the class of the blank samples. This must show the class
+      of blank samples exactly as you refer to them in your phenotype file
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.sample_blankfilter_pos_xcms:
+    description: Name of the class of the biological samples
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.rest_blankfilter_pos_xcms:
+    description: set to T to compare the blanks only to rest of the samples. If F,
+      the blank signals will be compared with the samples with class sample_blankfilter_pos_xcms
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.dilution_filter_pos:
+    description: Select whether you want to do dilution filtering
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.corto_dilutionfilter_pos_xcms:
+    description: 'This series will used for calculation of correlation. For example
+      if this parameter is set like 1,2,3 and the class of dilution trends is set
+      as D1,D2,D3 the following the pairs will be used for calculating the correlation:
+      (D1,1),(D2,2),(D3,3)'
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.dilution_dilutionfilter_pos_xcms:
+    description: The class of the samples represneting dilution. This has to be separated
+      by comma! The samples are correlated to the exact order of the sequence provided
+      here
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.pvalue_dilutionfilter_pos_xcms:
+    description: p-value of the correlation. Anything higher than this will be removed!
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.corcut_dilutionfilter_pos_xcms:
+    description: minimum expected correlation. Aniything lower than this will be removed!
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.abs_dilutionfilter_pos_xcms:
+    description: If the tool should consider absolute correlation rather than the
+      typical one from [-1 to 1] (F or T)
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.cv_filter_pos:
+    description: select to whether perfrom cv filtering or not
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.qc_cvfilter_pos_xcms:
+    description: class of your QC samples
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.cvcut_cvfilter_pos_xcms:
+    description: Maximum coefficient of variation you expect. Anything higher than
+      this will be removed!
+    group: filtering_parameters_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.quantification_openms_xcms_pos:
+    description: set whether you want to do quantification with OpenMS (openms) or
+      XCMS (xcms) in positive ionization
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.performIPO_pos:
+    description: 'controls how to perform IPO possible values: "none": don''t perform
+      IPO, "global": performs IPO on all or selected number of samples. "global_quant":
+      perform IPO only for quantification (not retention time correction and grouping),
+      "local": performs IPO on individual samples one at the time. "local_quant":
+      performs IPO on individual samples only for quantification, "local_RT": performs
+      IPO on only for retention time correction and grouping.'
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_allSamples_pos:
+    description: Performs IPO on all the samples irrespective of the class they have
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_columnToSelect_pos:
+    description: If ipo_allSamples_pos is false, one must pass the phenotype file
+      to select sample. This parameter select the column of the phenotype file.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_valueToSelect_pos:
+    description: Selects the files only with this value in the columnToSelect column
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_methodXset_pos:
+    description: Quantification methods for IPO. Only centWave is supported at this
+      stage.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_noise_l_pos:
+    description: lowest level of noise
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_noise_h_pos:
+    description: highest level of noise
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_snthresh_l_pos:
+    description: lowest level of signal to noise threshold
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_snthresh_h_pos:
+    description: highest level of signal to noise threshold
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzCenterFun_pos:
+    description: Function for centering the mz
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_integrate_pos:
+    description: Integration method. If '=1' peak limits are found through descent
+      on the mexican hat filtered data, if '=2' the descent is done on the real data.
+      Method 2 is very accurate but prone to noise, while method 1 is more robust
+      to noise but less exact.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_fitgauss_pos:
+    description: logical, if TRUE a Gaussian is fitte
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_min_peakwidth_l_pos:
+    description: lower minimum width of peaks
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_min_peakwidth_h_pos:
+    description: higher minimum width of peaks
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_peakwidth_l_pos:
+    description: lower maximum width of peaks
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_peakwidth_h_pos:
+    description: higher maximum width of peaks
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ppm_l_pos:
+    description: lower ppm mass deviation
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ppm_h_pos:
+    description: higher ppm mass deviation
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzdiff_l_pos:
+    description: lower minimum difference in m/z for peaks with overlapping retention
+      times, can be negative to allow overlap
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzdiff_h_pos:
+    description: higher minimum difference in m/z for peaks with overlapping retention
+      times, can be negative to allow overlap
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_charge_camera_pos:
+    description: maximum charge of molecules (only used in individual setting)
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_ppm_camera_pos:
+    description: ppm mass deviation for adducts (only used in individual setting)
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_l_l_pos:
+    description: lower value of K in 'prefilter_pos=c(k,I)'. Prefilter step for the
+      first phase. Mass traces are only retained if they contain at least 'k' peaks
+      with intensity >_pos= 'I'.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_l_h_pos:
+    description: higher value of K in 'prefilter_pos=c(k,I)'. Prefilter step for the
+      first phase. Mass traces are only retained if they contain at least 'k' peaks
+      with intensity >_pos= 'I'.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_h_l_pos:
+    description: lower I in prefilter
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_prefilter_h_h_pos:
+    description: higher I in prefilter
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_ncores_pos:
+    description: number of cores used in IPO
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapInit_l_pos:
+    description: lower Penalty for Gap opening
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapInit_h_pos:
+    description: higher Penalty for Gap opening
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapExtend_l_pos:
+    description: lower Penalty for Gap enlargement
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_gapExtend_h_pos:
+    description: higher Penalty for Gap enlargement
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_profStep_l_pos:
+    description: lower step size (in m/z) to use for profile generation from the raw
+      data files
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_profStep_h_pos:
+    description: higher step size (in m/z) to use for profile generation from the
+      raw data files
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_response_l_pos:
+    description: lower Responsiveness of warping.  0 will give a linear warp based
+      on start and end points.  100 will use all bijective anchors
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_response_h_pos:
+    description: higher Responsiveness of warping.  0 will give a linear warp based
+      on start and end points.  100 will use all bijective anchors
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorDiag_l_pos:
+    description: lower Local weighting applied to diagonal moves in alignment
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorDiag_h_pos:
+    description: higher Local weighting applied to diagonal moves in alignment
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorGap_l_pos:
+    description: lower Local weighting applied to gap moves in alignment
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_factorGap_h_pos:
+    description: higher Local weighting applied to gap moves in alignment
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_localAlignment_pos:
+    description: Local rather than global alignment
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_bw_l_pos:
+    description: lower bandwidth (consider something like retention time differences)
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_bw_h_pos:
+    description: higher bandwidth (consider something like retention time differences)
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minfrac_l_pos:
+    description: lower minimum fraction of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minfrac_h_pos:
+    description: higher minimum fraction of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzwid_l_pos:
+    description: lower mz width (mz differences)
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_mzwid_h_pos:
+    description: higher mz width (mz differences)
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minsamp_l_pos:
+    description: lower minimum number of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_minsamp_h_pos:
+    description: higher minimum number of samples necessary in at least one of the
+      sample groups for it to be a valid group
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_l_pos:
+    description: lower maximum number of groups to identify in a single m/z slice
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_max_h_pos:
+    description: higher maximum number of groups to identify in a single m/z slice
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_distFunc_pos:
+    description: 'DistFunc function: cor (Pearson''s R) or cor_opt (default, calculate
+      only 10% diagonal band of distance matrix, better runtime), cov (covariance),
+      prd (product), euc (Euclidean distance)'
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.ipo_methodRT_pos:
+    description: Only obiwarp is supported
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.masstrace_ppm_pos_xcms:
+    description: masstrance deviation in ppm
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.peakwidthlow_quant_pos_xcms:
+    description: lower width of peaks
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.peakwidthhigh_quant_pos_xcms:
+    description: highest width of peaks
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.noise_quant_pos_xcms:
+    description: level of noise
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.mzdiff_quant_pos_xcms:
+    description: minimum difference in m/z for peaks with overlapping retention times,
+      can be negative to allow overlap
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.snthresh_quant_pos_xcms:
+    description: signal to noise ratio cutoff, definition see below.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.prefilter_quant_pos_xcms:
+    description: K in 'prefilter=c(k,I)'. Prefilter step for the first phase. Mass
+      traces are only retained if they contain at least 'k' peaks with intensity >=
+      'I'.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.value_of_prefilter_quant_pos_xcms:
+    description: I in prefilter
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.mzCenterFun_quant_pos_xcms:
+    description: 'Function to calculate the m/z center of the feature: ''wMean'' intensity
+      weighted mean of the feature m/z values, ''mean'' mean of the feature m/z values,
+      ''apex'' use m/z value at peak apex, ''wMeanApex3'' intensity weighted mean
+      of the m/z value at peak apex and the m/z value left and right of it, ''meanApex3''
+      mean of the m/z value at peak apex and the m/z value left and right of it.'
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.integrate_quant_pos_xcms:
+    description: Integration method. If '=1' peak limits are found through descent
+      on the mexican hat filtered data, if '=2' the descent is done on the real data.
+      Method 2 is very accurate but prone to noise, while method 1 is more robust
+      to noise but less exact.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.fitgauss_quant_pos_xcms:
+    description: logical, if TRUE a Gaussian is fitted
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.phenodatacolumn_quant_pos:
+    description: name of the column in the phenotype_design_pos showing class information
+      of the samples
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.sampleclass_quant_pos_xcms:
+    description: A name for the class of sample
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.profStep_align_N1_pos_xcms:
+    description: step size (in m/z) to use for profile generation from the raw data
+      files
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.center_align_N1_pos_xcms:
+    description: the index of the sample all others will be aligned to. If center==NULL,
+      the sample with the most peaks is chosen as default.
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.response_align_N1_pos_xcms:
+    description: Responsiveness of warping.  0 will give a linear warp based on start
+      and end points.  100 will use all bijective anchors
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.distFunc_align_N1_pos_xcms:
+    description: 'DistFunc function: cor (Pearson''s R) or cor_opt (default, calculate
+      only 10% diagonal band of distance matrix, better runtime), cov (covariance),
+      prd (product), euc (Euclidean distance)'
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.gapInit_align_N1_pos_xcms:
+    description: Penalty for Gap opening
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.gapExtend_align_N1_pos_xcms:
+    description: Penalty for Gap enlargement
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.factorDiag_align_N1_pos_xcms:
+    description: Local weighting applied to diagonal moves in alignment
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.factorGap_align_N1_pos_xcms:
+    description: Local weighting applied to gap moves in alignment
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.localAlignment_align_N1_pos_xcms:
+    description: Local rather than global alignment
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.bandwidth_group_N1_pos_xcms:
+    description: bandwidth (consider something like retention time differences)
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.mzwid_group_N1_pos_xcms:
+    description: mz width (mz differences)
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.minfrac_group_N1_pos_xcms:
+    description: minimum fraction of samples necessary in at least one of the sample
+      groups for it to be a valid group
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.minsamp_group_N1_pos_xcms:
+    description: minimum number of samples necessary in at least one of the sample
+      groups for it to be a valid group
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.max_group_N1_pos_xcms:
+    description: maximum number of groups to identify in a single m/z slice
+    group: quantification_parameter_positive_mode
+    help: ''
+    hidden: false
+  metaboigniter.library_charactrized_neg:
+    description: if you have already charaztrized your negative library set this to
+      true and specify the path for library_charactrization_file_neg
+    group: library_controls_and_files_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.library_charactrization_file_neg:
+    description: path to the file from charaztrized library (negative)
+    group: library_controls_and_files_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.quant_library_mzml_files_neg:
+    description: Path to a folder containing library mzML files used for doing adduct
+      calcculation (MS1 data in megative ionization method)
+    group: library_controls_and_files_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.id_library_mzml_files_neg:
+    description: Path to a folder containing mzML files used for doing identification
+      (MS2 data in negative ionization method)
+    group: library_controls_and_files_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.library_description_neg:
+    description: Path to a csv file containing description of the library for negative
+      (see the help)
+    group: library_controls_and_files_negative_mode
+    help: ''
+    hidden: true
+  metaboigniter.library_charactrized_pos:
+    description: if you have already charaztrized your positive library set this to
+      true and specify the path for library_charactrization_file_pos
+    group: library_controls_and_files_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.library_charactrization_file_pos:
+    description: path to the file from charaztrized library (positive)
+    group: library_controls_and_files_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.quant_library_mzml_files_pos:
+    description: Path to a folder containing library mzML files used for doing adduct
+      calcculation (MS1 data in positive ionization method)
+    group: library_controls_and_files_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.id_library_mzml_files_pos:
+    description: Path to a folder containing mzML files used for doing identification
+      (MS2 data in positive ionization method)
+    group: library_controls_and_files_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.library_description_pos:
+    description: Path to a csv file containing description of the library for positive
+      (see the help)
+    group: library_controls_and_files_positive_mode
+    help: ''
+    hidden: true
+  metaboigniter.id_mzml_files_pos:
+    description: ath to a folder containing mzML files used for doing identification
+      (MS2 data in positive ionization method)
+    group: identification_input_files
+    help: ''
+    hidden: false
+  metaboigniter.id_mzml_files_neg:
+    description: Path to a folder containing mzML files used for doing identification
+      (MS2 data in negative ionization method)
+    group: identification_input_files
+    help: ''
+    hidden: false
+  metaboigniter.publishDir_intermediate:
+    description: set to true to publish all the middle stages
+    group: control_parameters
+    help: ''
+    hidden: false
+  metaboigniter.perform_identification:
+    description: Set to false if you don't want to do identification. You will not
+      require to set MS2 related parameters if you set this to false
+    group: control_parameters
+    help: ''
+    hidden: false
+  metaboigniter.perform_identification_metfrag:
+    description: Should Metfrag be used for doing identification?
+    group: control_parameters
+    help: ''
+    hidden: false
+  metaboigniter.perform_identification_csifingerid:
+    description: Should CSI:FingerID be used for doing identification?
+    group: control_parameters
+    help: ''
+    hidden: false
+  metaboigniter.perform_identification_cfmid:
+    description: Should CFM-ID be used for doing identification?
+    group: control_parameters
+    help: ''
+    hidden: false
+  metaboigniter.perform_identification_internal_library:
+    description: Should an internal library be used for doing identification?
+    group: control_parameters
+    help: ''
+    hidden: true
+  metaboigniter.type_of_ionization:
+    description: You can either set to 'pos' (only positive), 'neg' (only negative),
+      'both' (both positive and negative).
+    group: control_parameters
+    help: ''
+    hidden: false
+  metaboigniter.need_centroiding:
+    description: Set to true if your data is in profile mode (only for quantification!)
+    group: control_parameters
+    help: ''
+    hidden: false
+  metaboigniter.peakpicker_ini_file_pos_openms:
+    description: Path to the ini file for PeakPickerHiRes
+    group: openms_setting_files
+    help: ''
+    hidden: true
+  metaboigniter.peakpicker_ini_file_neg_openms:
+    description: Path to the ini file for PeakPickerHiRes
+    group: openms_setting_files
+    help: ''
+    hidden: true
+  metaboigniter.featurefinder_ini_pos_openms:
+    description: Path to the ini file for OpenMS FeatureFinderMetabo in positive mode
+    group: openms_setting_files
+    help: ''
+    hidden: true
+  metaboigniter.featurefinder_ini_neg_openms:
+    description: Path to the ini file for OpenMS FeatureFinderMetabo in negative mode
+    group: openms_setting_files
+    help: ''
+    hidden: true
+  metaboigniter.peakpicker_ini_file_library_pos_openms:
+    description: Path to the ini file for PeakPickerHiRes (for library)
+    group: openms_setting_files
+    help: ''
+    hidden: true
+  metaboigniter.peakpicker_ini_file_library_neg_openms:
+    description: Path to the ini file for PeakPickerHiRes  (for library)
+    group: openms_setting_files
+    help: ''
+    hidden: true
+  metaboigniter.featurefinder_ini_library_pos_openms:
+    description: Path to the ini file for OpenMS FeatureFinderMetabo in positive mode  (for
+      library)
+    group: openms_setting_files
+    help: ''
+    hidden: true
+  metaboigniter.featurefinder_ini_library_neg_openms:
+    description: Path to the ini file for OpenMS FeatureFinderMetabo in negative mode  (for
+      library)
+    group: openms_setting_files
+    help: ''
+    hidden: true
+  metaboigniter.samplesheet:
+    description: Path to a folder containing mzML files used for doing quantification
+      (MS1 data in positive ionization method)
+    group: quantification_input_files
+    help: ''
+    hidden: false
+  metaboigniter.quant_mzml_files_neg:
+    description: Path to a folder containing mzML files used for doing quantification
+      (MS1 data in negative ionization method)
+    group: quantification_input_files
+    help: ''
+    hidden: false
+  metaboigniter.phenotype_design_pos:
+    description: Path to a csv file containing the experimental design (MS1 data in
+      positive ionization method)
+    group: quantification_input_files
+    help: ''
+    hidden: false
+  metaboigniter.phenotype_design_neg:
+    description: Path to a csv file containing the experimental design (MS1 data in
+      negative ionization method)
+    group: quantification_input_files
+    help: ''
+    hidden: false
+  metaboigniter.help:
+    description: Display help text.
+    group: generic_options
+    help: ''
+    hidden: true
+  metaboigniter.publish_dir_mode:
+    description: Method used to save pipeline results to output directory.
+    group: generic_options
+    help: The Nextflow `publishDir` option specifies which intermediate files should
+      be saved to the output directory. This option tells the pipeline what method
+      should be used to move these files. See [Nextflow docs](https://www.nextflow.io/docs/latest/process.html#publishdir)
+      for details.
+    hidden: true
+  metaboigniter.validate_params:
+    description: Boolean whether to validate parameters against the schema at runtime
+    group: generic_options
+    help: ''
+    hidden: true
+  metaboigniter.email_on_fail:
+    description: Email address for completion summary, only when pipeline fails.
+    group: generic_options
+    help: This works exactly as with `--email`, except emails are only sent if the
+      workflow is not successful.
+    hidden: true
+  metaboigniter.plaintext_email:
+    description: Send plain-text email instead of HTML.
+    group: generic_options
+    help: Set to receive plain-text e-mails instead of HTML formatted.
+    hidden: true
+  metaboigniter.monochrome_logs:
+    description: Do not use coloured log outputs.
+    group: generic_options
+    help: Set to disable colourful command line output and live life in monochrome.
+    hidden: true
+  metaboigniter.tracedir:
+    description: Directory to keep pipeline Nextflow logs and reports.
+    group: generic_options
+    help: ''
+    hidden: true
+  metaboigniter.show_hidden_params:
+    description: Show all params when using `--help`
+    group: generic_options
+    help: By default, parameters set as _hidden_ in the schema are not shown on the
+      command line when a user runs with `--help`. Specifying this option will tell
+      the pipeline to show all parameters.
+    hidden: true
+  metaboigniter.max_cpus:
+    description: Maximum number of CPUs that can be requested    for any single job.
+    group: max_job_request_options
+    help: Use to set an upper-limit for the CPU requirement for each process. Should
+      be an integer e.g. `--max_cpus 1`
+    hidden: true
+  metaboigniter.max_memory:
+    description: Maximum amount of memory that can be requested for any single job.
+    group: max_job_request_options
+    help: Use to set an upper-limit for the memory requirement for each process. Should
+      be a string in the format integer-unit e.g. `--max_memory '8.GB'`
+    hidden: true
+  metaboigniter.max_time:
+    description: Maximum amount of time that can be requested for any single job.
+    group: max_job_request_options
+    help: Use to set an upper-limit for the time requirement for each process. Should
+      be a string in the format integer-unit e.g. `--max_time '2.h'`
+    hidden: true
+  metaboigniter.custom_config_version:
+    description: Git commit id for Institutional configs.
+    group: institutional_config_options
+    help: "Provide git commit id for custom Institutional configs hosted at `nf-core/configs`.\
+      \ This was implemented for reproducibility purposes. Default: `master`.\n\n\
+      ```bash\n Download and use config file with following git commit id\n--custom_config_version\
+      \ d52db660777c4bf36546ddb188ec530c3ada1b96\n```"
+    hidden: true
+  metaboigniter.custom_config_base:
+    description: Base directory for Institutional configs.
+    group: institutional_config_options
+    help: "If you're running offline, nextflow will not be able to fetch the institutional\
+      \ config files from the internet. If you don't need them, then this is not a\
+      \ problem. If you do need them, you should download the files from the repo\
+      \ and tell nextflow where to find them with the `custom_config_base` option.\
+      \ For example:\n\n```bash\n Download and unzip the config files\ncd /path/to/my/configs\n\
+      wget https://github.com/nf-core/configs/archive/master.zip\nunzip master.zip\n\
+      \n Run the pipeline\ncd /path/to/my/data\nnextflow run /path/to/pipeline/ --custom_config_base\
+      \ /path/to/my/configs/configs-master/\n```\n\n> Note that the nf-core/tools\
+      \ helper package has a `download` command to download all required pipeline\
+      \ files + singularity containers + institutional configs in one go for you,\
+      \ to make this process easier."
+    hidden: true
+  metaboigniter.hostnames:
+    description: Institutional configs hostname.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+  metaboigniter.config_profile_name:
+    description: Institutional config name.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+  metaboigniter.config_profile_description:
+    description: Institutional config description.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+  metaboigniter.config_profile_contact:
+    description: Institutional config contact information.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+  metaboigniter.config_profile_url:
+    description: Institutional config URL link.
+    group: institutional_config_options
+    help: ''
+    hidden: true
+parameter_group:
+  global_options:
+    description: General options that affect the whole pipeline
+    help: null
+    title: Global options
+  internal_library_quantification_and_identification_parameters_negative_mode:
+    description: Parameters used to tune library creation (only set if you want to
+      do library idnetification)
+    help: ''
+    title: Internal library quantification and identification parameters (negative
+      mode)
+  internal_library_parameters_negative_mode:
+    description: Parameters used to characterize the internal library
+    help: ''
+    title: Internal library parameters (negative mode)
+  output_preparation_negative_mode:
+    description: Parameters that control how the results are outputted
+    help: ''
+    title: Output preparation (negative mode)
+  cfm_id_parameters_negative_mode:
+    description: Parameters specific to CFM-ID
+    help: ''
+    title: CFM-ID parameters (negative mode)
+  metfrag_parameters_negative_mode:
+    description: Parameters only for MetFrag
+    help: ''
+    title: MetFrag parameters (negative mode)
+  csi_fingerid_parameters_negative_mode:
+    description: Parameters only for CSI:FINGERID
+    help: ''
+    title: CSI:FINGERID parameters (negative mode)
+  global_identification_parameters_negative_mode:
+    description: Parameters that will be used in all the search engines
+    help: ''
+    title: Global identification parameters (negative mode)
+  adduct_and_isotope_annotation_negative_mode:
+    description: Settings for CAMERA to detect adducts and isotopes
+    help: ''
+    title: Adduct and isotope annotation (negative mode)
+  filtering_parameters_negative_mode:
+    description: Parameters to use for performing QC, blank and dilution filtering
+    help: ''
+    title: Filtering parameters (negative mode)
+  quantification_parameter_negative_mode:
+    description: Parameters for quantification
+    help: ''
+    title: Quantification parameter (negative mode)
+  internal_library_quantification_and_identification_parameters_positive_mode:
+    description: Parameters used to tune library creation (only set if you want to
+      do library idnetification)
+    help: ''
+    title: Internal library quantification and identification parameters (positive
+      mode)
+  internal_library_parameters_positive_mode:
+    description: Parameters used to characterize the internal library
+    help: ''
+    title: Internal library parameters (positive mode)
+  output_preparation_positive_mode:
+    description: Parameters that control how the results are outputted
+    help: ''
+    title: Output preparation (positive mode)
+  cfm_id_parameters_positive_mode:
+    description: Parameters specific to CFM-ID
+    help: ''
+    title: CFM-ID parameters (positive mode)
+  metfrag_parameters_positive_mode:
+    description: Parameters only for MetFrag
+    help: ''
+    title: MetFrag parameters (positive mode)
+  csi_fingerid_parameters_positive_mode:
+    description: Parameters only for CSI:FINGERID
+    help: ''
+    title: CSI:FINGERID parameters (positive mode)
+  global_identification_parameters_positive_mode:
+    description: Parameters that will be used in all the search engines
+    help: ''
+    title: Global identification parameters (positive mode)
+  adduct_and_isotope_annotation_positive_mode:
+    description: Settings for CAMERA to detect adducts and isotopes
+    help: ''
+    title: Adduct and isotope annotation (positive mode)
+  filtering_parameters_positive_mode:
+    description: Parameters to use for performing QC, blank and dilution filtering
+    help: ''
+    title: Filtering parameters (positive mode)
+  quantification_parameter_positive_mode:
+    description: Parameters for quantification
+    help: ''
+    title: Quantification parameter (positive mode)
+  library_controls_and_files_negative_mode:
+    description: Input files includes mzML files and settings for performing identification
+      using internal library
+    help: ''
+    title: Library controls and files (negative mode)
+  library_controls_and_files_positive_mode:
+    description: Input files includes mzML files and settings for performing identification
+      using internal library
+    help: ''
+    title: Library controls and files (positive mode)
+  identification_input_files:
+    description: Input files includes mzML files for performing identification
+    help: ''
+    title: Identification input files
+  control_parameters:
+    description: Used to control functionality of the workflow e.g identification,
+      quantification etc
+    help: ''
+    title: Control parameters
+  openms_setting_files:
+    description: Used for peak picking and feature detection
+    help: ''
+    title: OpenMS setting files
+  quantification_input_files:
+    description: Input files includes mzML files for performing quantification
+    help: ''
+    title: Quantification input files
+  generic_options:
+    description: Less common options for the pipeline, typically set in a config file.
+    help: 'These options are common to all nf-core pipelines and allow you to customise
+      some of the core preferences for how the pipeline runs.
+
+
+      Typically these options would be set in a Nextflow config file loaded for all
+      pipeline runs, such as `~/.nextflow/config`.'
+    title: Generic options
+  max_job_request_options:
+    description: Set the top limit for requested resources for any single job.
+    help: 'If you are running on a smaller system, a pipeline step requesting more
+      resources than are available may cause the Nextflow to stop the run with an
+      error. These options allow you to cap the maximum resources requested by any
+      single job so that the pipeline will run on your system.
+
+
+      Note that you can not _increase_ the resources requested by any job using these
+      options. For that you will need your own configuration file. See [the nf-core
+      website](https://nf-co.re/usage/configuration) for details.'
+    title: Max job request options
+  institutional_config_options:
+    description: Parameters used to describe centralised config profiles. These should
+      not be edited.
+    help: The centralised nf-core configuration profiles use a handful of pipeline
+      parameters to describe themselves. This information is then printed to the Nextflow
+      log when you run a pipeline. You should not need to change these values when
+      you run a pipeline.
+    title: Institutional config options
