@@ -1,0 +1,19 @@
+name: nf.core metaboigniter
+identifier: WF_8f9377.54
+description: Pre-processing of mass spectrometry-based metabolomics data with quantification
+  and identification based on MS1 and MS2 data.
+softwareVersion:
+  versionName: 1.0.1
+metadataStatus: Released
+workflowStatus: Released
+workflowFile: metaboigniter.wdl
+repoName: nfcore-metaboigniter
+gitTag: master
+inputsTemplate: inputs.json
+executable: true
+current: true
+codeRepository:
+  URL: https://github.com/truwl/nfcore-metaboigniter/
+WebSite:
+- URL: https://github.com/nf-core/metaboigniter
+  name: nf-core/metaboigniter
